@@ -1,0 +1,46 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+{% import _self as menus %}
+
+{{ menus.nav_secondary(items, 0) }}
+
+{% macro nav_secondary(items, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <nav class="nav-secondary" aria-label="Secondary navigation">
+      <ul class="nav-secondary-menu nav-secondary-list-level-{{ menu_level }}">
+    {% else %}
+      <ul class="nav-secondary-list-sub-{{ menu_level }}">
+    {% endif %}
+    {% for item in items %}
+      {% if 'tel:' in item.url %}
+        <li class="nav-secondary-list__item nav-secondary-list__item-level-{{ menu_level }}{{ item.below ? ' has-children' }}">
+          <a class="nav-secondary-list__link site-header__desktop-call" href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+          {% if item.below %}
+            {{ menus.nav_secondary(item.below, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% else %}
+        <li class="nav-secondary-list__item nav-secondary-list__item-level-{{ menu_level }}{{ item.below ? ' has-children' }}">
+          <a class="nav-secondary-list__link" href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+          {% if item.below %}
+            {{ menus.nav_secondary(item.below, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+    {% if menu_level == 0 %}
+      </nav>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+
+
+

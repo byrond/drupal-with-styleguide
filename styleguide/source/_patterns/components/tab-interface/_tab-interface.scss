@@ -1,0 +1,64 @@
+// @copyright Copyright (c) 2022 Palantir.net
+
+// Tab list of labels
+.tabbed [role='tablist'] {
+  padding: 0;
+  margin: 0;
+
+  li,
+  a {
+    display: block;
+
+    @include breakpoint($bp2) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    border: 1px solid $black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+
+    @include breakpoint($bp2) {
+      border-color: transparent;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  li + li a {
+    @include breakpoint(0 $bp2) {
+      border-top: 0;
+    }
+  }
+
+  [aria-selected] {
+    background: $white;
+
+    @include breakpoint(0 $bp2) {
+      // Add in a visual element to indicate the active state of selected label
+      &::after {
+        content: '\0020⬅';
+      }
+    }
+
+    @include breakpoint($bp2) {
+      position: relative;
+      top: 2px;
+      border: 1px solid $black;
+      border-bottom: 0;
+    }
+  }
+}
+
+// Tab content
+.tabbed [role='tabpanel'] {
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: $black;
+  padding: 1rem;
+
+  @include breakpoint($bp2) {
+    border-width: 1px;
+    padding: 1.5rem;
+  }
+}

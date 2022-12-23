@@ -1,0 +1,7 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<label for="{{for}}">{{text}}</label>
+{% if display_field %}
+  {# This field (display_field) is a helper field for the styleguide html-lint test. It should not be included in the implemented output. #}
+  <input class="element-invisible" type="text" id="{{for}}">
+{% endif %}

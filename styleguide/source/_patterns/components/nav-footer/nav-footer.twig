@@ -1,0 +1,33 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+{% import _self as menus %}
+
+<div class="nav-footer">
+  {{ menus.nav_footer(items, 0) }}
+</div>
+
+{% macro nav_footer(items, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <nav class="nav" aria-label="Footer navigation">
+      <ul class="nav-footer__list nav-footer__list-level-{{ menu_level }}">
+    {% else %}
+      <ul class="nav-footer__list-sub nav-footer__list-sub-level-{{ menu_level }}">
+    {% endif %}
+    {% for item in items %}
+      <li class="nav-footer__item nav-footer__item-level-{{ menu_level }}{{ item.below ? ' has-children' }}">
+        <a class="nav-footer__link" href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+        {% if item.below %}
+          {{ menus.nav_footer(item.below, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+    {% if menu_level == 0 %}
+      </nav>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

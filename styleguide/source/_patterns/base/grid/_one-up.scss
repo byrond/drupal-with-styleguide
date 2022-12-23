@@ -1,0 +1,19 @@
+// @copyright Copyright (c) 2022 Palantir.net
+
+////////////////////////////////////////////////////////////////////////////////
+// Feel free to adjust any grid parameters or breakpoints to suit your project.
+//
+// For non-support for grid, ensure you (1) set a base width, and for more
+// complex layouts, (2) set a width that includes gap offet, (3) set bottom
+// and side margins, (4) add clears & floats.
+////////////////////////////////////////////////////////////////////////////////
+
+.l-grid--1up {
+  .l-grid-item {
+    width: 100%; // 1
+
+    @supports (display: grid) {
+      width: auto;
+    }
+  }
+}

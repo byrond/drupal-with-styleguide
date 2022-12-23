@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }} no-js">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Styleguides should not be indexed by search engines. -->
+    <meta name="robots" content="none" />
+
+    {# custom styles #}
+    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />
+    {# Patternlab styles #}
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />
+
+    <link rel="icon" type="image/png" href="../../favicon.ico" sizes="32x32" />
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    {{ patternLabHead | raw }}
+    <!-- End Pattern Lab -->
+
+  </head>
+  <body class="{{ bodyClass }}">

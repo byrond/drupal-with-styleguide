@@ -1,0 +1,91 @@
+{
+  "name": "palantir-lab",
+  "description": "A Pattern Lab starter kit.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palantirnet/palantir-lab.git"
+  },
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=12.0 <=15",
+    "yarn": "^1.0"
+  },
+  "scripts": {
+    "build": "gulp buildOnly",
+    "develop": "gulp",
+    "deploy": "gulp deploy",
+    "watch": "gulp watch",
+    "format": "gulp format",
+    "a11y": "gulp a11y"
+  },
+  "dependencies": {
+    "@pattern-lab/cli": "^5.14.0",
+    "@pattern-lab/core": "^5.14.0",
+    "@pattern-lab/engine-twig-php": "^5.14.0",
+    "@pattern-lab/uikit-workshop": "^5.14.0",
+    "autoprefixer": "^10.0.1",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.26.12",
+    "core-js": "^3.24.1",
+    "create-pattern-lab": "^5.13.1",
+    "del": "^6.0.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "fancylog": "^4.0.5",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-accessibility": "^3.1.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-order": "^1.2.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "normalize.css": "^8.0.1",
+    "plugin-error": "^1.0.1",
+    "postcss": "^8.1.1",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0",
+    "require-dir": "^1.2.0",
+    "safe-buffer": "^5.2.1",
+    "stylelint": "^13.7.2",
+    "stylelint-scss": "^3.18.0",
+    "support-for": "^1.0.7",
+    "through2": "^4.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "grid": "true"
+      },
+      "cssnano": {}
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@pattern-lab/cli": "^5.14.0",
+    "eslint": "^6.0.0",
+    "terser": "^4.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/palantirnet/palantir-lab/issues"
+  },
+  "homepage": "https://github.com/palantirnet/palantir-lab#readme",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": ""
+}

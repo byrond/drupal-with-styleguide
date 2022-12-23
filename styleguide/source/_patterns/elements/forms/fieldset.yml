@@ -1,0 +1,10 @@
+id: fieldset
+legend_text: Contact Information
+tel_id: tel-input__fieldset
+tel_for: tel-input__fieldset
+tel_text: Telephone
+tel_placeholder: "(555) 555-5555"
+email_id: email-input__fieldset
+email_for: email-input__fieldset
+email_text: E-mail
+email_placeholder: name@example.com

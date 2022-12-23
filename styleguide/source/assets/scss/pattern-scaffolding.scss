@@ -1,0 +1,73 @@
+/**
+ * This stylesheet is for styles you want to include only when displaying demo
+ * styles for grids, animations, color swatches, etc.
+ * These styles will not be your production CSS.
+ */
+
+#sg-patterns {
+  -webkit-box-sizing: border-box !important; // sass-lint:disable indentation
+          box-sizing: border-box !important; // sass-lint:disable indentation
+  max-width: 100%;
+  padding: 0 0.5em;
+}
+
+.sg-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  height: 100px;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 4em 1em;
+}
+
+.demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sg-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; // sass-lint:disable indentation
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.sg-colors li {
+  -webkit-box-flex: 1;
+      -ms-flex: auto; // sass-lint:disable indentation
+          flex: auto; // sass-lint:disable indentation
+  padding: 0.3em;
+  margin: 0 0.5em 0.5em 0;
+  min-width: 5em;
+  max-width: 14em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.sg-swatch {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+}
+
+.sg-label {
+  font-size: 90%;
+  line-height: 1;
+}
+
+.sg-subtype {
+  padding: 20px;
+  background-color: #dbe8ec;
+  clear: both;
+}

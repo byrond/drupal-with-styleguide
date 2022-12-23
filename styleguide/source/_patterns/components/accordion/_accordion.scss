@@ -1,0 +1,35 @@
+// @copyright Copyright (c) 2022 Palantir.net
+
+.accordion {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: $black;
+
+  > div + .accordion__title {
+    border-top: 1px solid;
+  }
+}
+
+.accordion__title {
+  margin: 0;
+}
+
+.accordion__button {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  padding: 0.5em 0;
+
+  // Display plus symbol at initial state
+  &::after {
+    content: '+';
+    margin-left: 0.5em;
+  }
+
+  // Replace plus symbol with en dash when accordion is open
+  &[aria-expanded='true']::after {
+    content: '–';
+  }
+}

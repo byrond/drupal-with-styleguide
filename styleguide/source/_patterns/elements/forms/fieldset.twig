@@ -1,0 +1,20 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<fieldset id="{{id}}">
+  {% block fieldset %}
+    {% set text = legend_text %}
+    {% include '@elements/forms/legend.twig' %}
+    {% set for = email_for %}
+    {% set text = email_text %}
+    {% set id = email_id %}
+    {% set placeholder = email_placeholder %}
+    {% include '@elements/forms/label.twig' %}
+    {% include '@elements/forms/input-email.twig' %}
+    {% set for = tel_for %}
+    {% set text = tel_text %}
+    {% set id = tel_id %}
+    {% set placeholder = tel_placeholder %}
+    {% include '@elements/forms/label.twig' %}
+    {% include '@elements/forms/input-tel.twig' %}
+  {% endblock %}
+</fieldset>

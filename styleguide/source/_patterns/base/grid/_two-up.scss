@@ -1,0 +1,58 @@
+// @copyright Copyright (c) 2022 Palantir.net
+
+////////////////////////////////////////////////////////////////////////////////
+// Feel free to adjust any grid parameters or breakpoints to suit your project.
+//
+// For non-support for grid, ensure you (1) set a base width, and for more
+// complex layouts, (2) set a width that includes gap offet, (3) set bottom
+// and side margins, (4) add clears & floats.
+////////////////////////////////////////////////////////////////////////////////
+
+// Set the grid columns at breakpoint
+.l-grid--2up {
+  @include breakpoint($bp2) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // 2up grid layout
+  .l-grid-item {
+    width: 100%; // 1
+    margin-bottom: $gap; // 3
+
+    @supports (display: grid) {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($bp2) {
+      width: calc(100% * 1 / 2 - #{$gap} / (2 / 1)); // 2
+      margin: 0 $gap $gap 0; // 3
+      float: left; // 4
+
+      @supports (display: grid) {
+        width: auto;
+        float: none;
+        margin: 0;
+      }
+
+      // Style last item in each row
+      &:nth-child(2n) {
+        margin-right: 0; // 3
+        float: right; // 4
+
+        @supports (display: grid) {
+          float: none;
+        }
+      }
+
+      // Style first item in each row
+      &:nth-child(2n + 1) {
+        clear: left; // 4
+
+        @supports (display: grid) {
+          clear: none;
+        }
+      }
+    }
+  }
+}

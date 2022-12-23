@@ -1,0 +1,5 @@
+items:
+  - name: "$black"
+    value: "#000000"
+  - name: "$white"
+    value: "#ffffff"

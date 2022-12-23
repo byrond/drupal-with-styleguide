@@ -1,0 +1,12 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<figure class="inline-video">
+  <div class="inline-video-container">
+    <iframe src="{{ video_url }}" title="{{ title }}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  {% if caption %}
+  <figcaption class="inline-caption">
+    {{ caption }}
+  </figcaption>
+  {% endif %}
+</figure>

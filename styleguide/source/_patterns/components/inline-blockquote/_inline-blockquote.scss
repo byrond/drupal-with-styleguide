@@ -1,0 +1,14 @@
+// @copyright Copyright (c) 2022 Palantir.net
+
+blockquote,
+.inline-quote {
+  @include adjust-font-size-to($sm-heading, 1.15);
+  font-style: italic;
+  margin: $space 0;
+  padding: 0;
+
+  span {
+    display: block;
+    margin-top: 1em;
+  }
+}

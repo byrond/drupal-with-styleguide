@@ -1,0 +1,13 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+{% if caption %}
+  <figure role="group" class="{% if orientation %}align-{{ orientation }}{% endif %}">
+    {% set orientation = "" %}
+    {% include '@elements/images/image.twig' %}
+    <figcaption class="inline-caption">
+      {{ caption }}
+    </figcaption>
+  </figure>
+{% else %}
+  {% include '@elements/images/image.twig' %}
+{% endif %}

@@ -1,0 +1,10 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<blockquote class="inline-quote {% if orientation == 'left' %}align-left{% endif %}{% if orientation == 'right' %}align-right{% endif %}">
+  {{ quote }}
+  {% if attribution %}
+  <span>
+    {{ attribution }}
+  </span>
+  {% endif %}
+</blockquote>

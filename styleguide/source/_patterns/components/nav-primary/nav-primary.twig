@@ -1,0 +1,42 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+{% import _self as menus %}
+
+{{ menus.nav_primary(items, 0) }}
+
+{% macro nav_primary(items, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <nav class="nav-primary" aria-label="Primary navigation">
+      <ul class="nav-primary-menu nav-primary-list-level-{{ menu_level }}">
+    {% else %}
+      <ul class="nav-primary-list-sub-{{ menu_level }}">
+    {% endif %}
+    {% for item in items %}
+      {% if loop.index == loop.length %}
+        <li class="nav-primary-list__item nav-primary-list__item-level-{{ menu_level }}{{ item.below ? ' has-children' }}">
+          <a class="nav-primary-list__link nav-primary-list__cta" href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+          {% if item.below %}
+            {{ menus.nav_primary(item.below, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% else %}
+        <li class="nav-primary-list__item nav-primary-list__item-level-{{ menu_level }}{{ item.below ? ' has-children' }}">
+          <a class="nav-primary-list__link" href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+          {% if item.below %}
+            {{ menus.nav_primary(item.below, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+    {% if menu_level == 0 %}
+      </nav>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

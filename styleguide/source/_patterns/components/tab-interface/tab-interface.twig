@@ -1,0 +1,16 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<div class="tabbed">
+  <ul>
+    {% for item in tablist %}
+      <li>
+        <a href="#section{{ loop.index }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% for item in tablist %}
+    <section id="section{{ loop.index }}">
+      {{ item.desc }}
+    </section>
+  {% endfor %}
+</div>

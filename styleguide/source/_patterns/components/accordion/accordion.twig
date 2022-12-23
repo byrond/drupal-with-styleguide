@@ -1,0 +1,14 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<div class="accordion">
+  {% for item in accordion %}
+    <h2 class="accordion__title">
+      <button id="accordion-header-{{ loop.index }}" class="accordion__button" aria-expanded="false" aria-controls="accordion-section-{{ loop.index }}">
+        {{ item.label }}
+      </button>
+    </h2>
+    <div id="accordion-section-{{ loop.index }}" aria-labelledby="accordion-header-{{ loop.index }}" hidden>
+      {{ item.desc }}
+    </div>
+  {% endfor %}
+</div>

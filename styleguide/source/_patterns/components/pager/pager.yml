@@ -1,0 +1,24 @@
+items:
+  first:
+    href: '#'
+  previous:
+    href: '#'
+  pages:
+    3:
+      href: "#"
+    4:
+      href: "#"
+    5:
+      href: "#"
+    6:
+      href: "#"
+    7:
+      href: "#"
+  next:
+    href: '#'
+  last:
+    href: '#'
+current: 5
+ellipses:
+  previous: true
+  next: true

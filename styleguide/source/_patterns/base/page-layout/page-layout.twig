@@ -1,0 +1,42 @@
+{# page-layout #}
+<div class="container">
+  <div class="l-page-layout {% if left == null and right == null and right_top == null and left_bottom == null %}l-page-layout--centered{% endif %} {% if left or left_bottom %}l-page-layout--left{% endif %} {% if right or right_top %}l-page-layout--right{% endif %}">
+    {% if left %}
+    <div class="l-page-layout__left">
+      <div class="sg-placeholder">
+        Left Top Column Placeholder
+      </div>
+    </div>
+    {% endif %}
+
+    {% if right_top %}
+    <div class="l-page-layout__right">
+      <div class="sg-placeholder">
+        Right Top Column Placeholder
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="l-page-layout__main">
+      <div class="sg-placeholder">
+        Main Column Placeholder
+      </div>
+    </div>
+
+    {% if left_bottom %}
+    <div class="l-page-layout__left">
+      <div class="sg-placeholder">
+        Left Bottom Column Placeholder
+      </div>
+    </div>
+    {% endif %}
+
+    {% if right %}
+    <div class="l-page-layout__right">
+      <div class="sg-placeholder">
+        Right Bottom Column Placeholder
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

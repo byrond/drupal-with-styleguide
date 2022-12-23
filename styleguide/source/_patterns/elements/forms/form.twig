@@ -1,0 +1,26 @@
+{# @copyright Copyright (c) 2022 Palantir.net #}
+
+<form id="{{id}}" name="{{name}}" action="{{action}}" method="{{method}}">
+  {% block form %}
+    {% set for = first_name_for %}
+    {% set text = first_name_text %}
+    {% set id = first_name_id %}
+    {% set placeholder = first_name_placeholder %}
+    {% include '@elements/forms/label.twig' %}
+    {% include '@elements/forms/input-text.twig' %}
+    {% set for = last_name_for %}
+    {% set text = last_name_text %}
+    {% set id = last_name_id %}
+    {% set placeholder = last_name_placeholder %}
+    {% include '@elements/forms/label.twig' %}
+    {% include '@elements/forms/input-text.twig' %}
+    {% set id = fieldset_id %}
+    {% include '@elements/forms/fieldset.twig' %}
+    {% set id = submit_id %}
+    {% set value = submit_value %}
+    {% include '@elements/forms/input-submit.twig' %}
+    {% set id = reset_id %}
+    {% set value = reset_value %}
+    {% include '@elements/forms/input-reset.twig' %}
+  {% endblock %}
+</form>

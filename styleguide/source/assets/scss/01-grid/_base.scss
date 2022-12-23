@@ -1,0 +1,36 @@
+// @file
+// Define your grid base here.
+// @copyright Copyright (c) 2022 Palantir.net
+
+$gap: rhythm(1);
+$row-gap: $gap;
+
+%container,
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 rhythm(1);
+}
+
+// Set the default grid gap
+$gap: 2em;
+
+// Set the base grid layout
+@mixin basegrid($columns: 1fr, $rows: auto, $column-gap: $gap, $row-gap: $row-gap) {
+  @extend %clearfix;
+  display: block;
+
+  @supports (display: grid) {
+    @extend %clearnone; // Remove clearfix for @supports (display: grid) browsers
+    display: grid;
+    grid-template-columns: #{$columns};
+    grid-template-rows: #{$rows};
+    grid-column-gap: #{$column-gap};
+    grid-row-gap: #{$row-gap};
+  }
+}
+
+// Set the grid layout to container element
+.l-grid {
+  @include basegrid();
+}

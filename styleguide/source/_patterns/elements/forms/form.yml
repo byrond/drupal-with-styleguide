@@ -1,0 +1,25 @@
+id: form
+fieldset_id: fieldset__form
+name: name
+action: " "
+method: post
+first_name_id: first-name-input
+first_name_for: first-name-input
+first_name_text: First Name
+first_name_placeholder: Jane
+last_name_id: last-name-input
+last_name_for: last-name-input
+last_name_text: Last Name
+last_name_placeholder: Doe
+tel_id: tel-input__form
+tel_for: tel-input__form
+tel_text: Telephone
+tel_placeholder: "(555) 555-5555"
+email_id: email-input__form
+email_for: email-input__form
+email_text: E-mail
+email_placeholder: name@example.com
+submit_id: submit__form
+submit_value: Submit
+reset_id: reset__form
+reset_value: Reset
