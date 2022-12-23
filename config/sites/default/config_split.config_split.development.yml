@@ -1,0 +1,18 @@
+uuid: af483d9c-7b02-420f-b286-9a09bdc9a9bd
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: SuTVmpi-bU16eqyYZPp4yQU-yAGNOF3uaReHXpOIzfo
+id: development
+label: Development
+description: 'Configuration for local development environments.'
+folder: ../config/config_split/development
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: -3
